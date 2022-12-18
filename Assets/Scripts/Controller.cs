@@ -29,11 +29,8 @@ public class Controller : MonoBehaviour
 
             }
         }
-
-        if (horizontalInput != 0) 
-        {
-            playerBody.velocity = new Vector2(horizontalInput * horizontalMoveSpeed, playerBody.velocity.y);
-        }
+        playerBody.velocity = new Vector2(horizontalInput * horizontalMoveSpeed, playerBody.velocity.y);
+        
         
         // if (playerTransform.rotation.z != 0)
         // {
