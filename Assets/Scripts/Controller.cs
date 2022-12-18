@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Controller : MonoBehaviour
 {
-    public Rigidbody2D myRigidBody2d;
+    public Rigidbody2D playerBody;
     public float horizontalMoveSpeed = 8;
     public float verticalMoveSpeed = 8;
     
@@ -17,10 +17,19 @@ public class Controller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKey(KeyCode.UpArrow))
+        float horizontalInput = Input.GetAxis("Horizontal");
+
+        if(Input.GetKey(KeyCode.UpArrow) && playerBody.velocity.y == 0)
         {
-            myRigidBody2d.velocity = Vector2.up * verticalMoveSpeed;
+            playerBody.velocity = new Vector2(playerBody.velocity.x, verticalMoveSpeed);
 
         }
+        if (horizontalInput != 0) 
+        {
+            playerBody.velocity = new Vector2(horizontalInput * horizontalMoveSpeed, playerBody.velocity.y);
+        }
+        
+
+        Debug.Log(playerBody.velocity);
     }
 }
