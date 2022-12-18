@@ -24,10 +24,8 @@ public class Controller : MonoBehaviour
             playerBody.velocity = new Vector2(playerBody.velocity.x, verticalMoveSpeed);
 
         }
-        if (horizontalInput != 0) 
-        {
-            playerBody.velocity = new Vector2(horizontalInput * horizontalMoveSpeed, playerBody.velocity.y);
-        }
+        playerBody.velocity = new Vector2(horizontalInput * horizontalMoveSpeed, playerBody.velocity.y);
+        
         
 
         Debug.Log(playerBody.velocity);
