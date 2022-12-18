@@ -7,6 +7,7 @@ public class Controller : MonoBehaviour
     public Rigidbody2D playerBody;
     public float horizontalMoveSpeed = 8;
     public float verticalMoveSpeed = 8;
+    public Transform playerTransform;
     
     // Start is called before the first frame update
     void Start()
@@ -18,18 +19,28 @@ public class Controller : MonoBehaviour
     void Update()
     {
         float horizontalInput = Input.GetAxis("Horizontal");
+        bool upInput = Input.GetKey(KeyCode.UpArrow);
 
-        if(Input.GetKey(KeyCode.UpArrow) && playerBody.velocity.y == 0)
+        if(upInput)
         {
+            if (playerBody.velocity.y <= 0.01 && playerBody.velocity.y >= -0.01)
+            {
             playerBody.velocity = new Vector2(playerBody.velocity.x, verticalMoveSpeed);
 
+            }
         }
+
         if (horizontalInput != 0) 
         {
             playerBody.velocity = new Vector2(horizontalInput * horizontalMoveSpeed, playerBody.velocity.y);
         }
         
+        // if (playerTransform.rotation.z != 0)
+        // {
+        //     playerTransform.rotation = Quaternion.Euler(0, 0, 0);
+        // }
 
-        Debug.Log(playerBody.velocity);
+
+
     }
 }
