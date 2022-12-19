@@ -28,16 +28,14 @@ public class CameraScript : MonoBehaviour
         float bottomOfCamera = currentCameraY - size ;
 
         //Camera move increment
-        float cameraIncrement;
+        float cameraIncrement = (currentObjY - currentCameraY) / 60;
 
         if (currentObjY > topOfCamera - buffer) //if the camera needs to move up
         {
-            cameraIncrement = 0.01f;
             myCamera.transform.position += new Vector3(0, cameraIncrement, 0);
         }
         else if (currentObjY < bottomOfCamera + buffer) //if the camera needs to move down
         {
-            cameraIncrement = -0.01f;
             myCamera.transform.position += new Vector3(0, cameraIncrement, 0);
         }
 
