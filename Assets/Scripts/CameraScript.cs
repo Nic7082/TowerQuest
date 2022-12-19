@@ -6,7 +6,6 @@ public class CameraScript : MonoBehaviour
 {
     public GameObject myObj;
     public Camera myCamera;
-    public Rigidbody2D myObjRigidBody;
     void Update()
     {
         //The current y coordinate of the game object
@@ -28,16 +27,14 @@ public class CameraScript : MonoBehaviour
         float bottomOfCamera = currentCameraY - size ;
 
         //Camera move increment
-        float cameraIncrement;
+        float cameraIncrement = (currentObjY - currentCameraY) / 60;
 
         if (currentObjY > topOfCamera - buffer) //if the camera needs to move up
         {
-            cameraIncrement = 0.01f;
             myCamera.transform.position += new Vector3(0, cameraIncrement, 0);
         }
         else if (currentObjY < bottomOfCamera + buffer) //if the camera needs to move down
         {
-            cameraIncrement = -0.01f;
             myCamera.transform.position += new Vector3(0, cameraIncrement, 0);
         }
 
