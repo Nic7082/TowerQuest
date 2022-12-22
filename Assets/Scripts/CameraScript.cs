@@ -5,6 +5,7 @@ using UnityEngine;
 public class CameraScript : MonoBehaviour
 {
     public GameObject myObj;
+    public Transform mageTransform;
     public Camera myCamera;
     public Rigidbody2D myObjRigidBody;
     void Update()
@@ -37,6 +38,10 @@ public class CameraScript : MonoBehaviour
         else if (currentObjY < bottomOfCamera + buffer) //if the camera needs to move down
         {
             myCamera.transform.position += new Vector3(0, cameraIncrement, 0);
+        }
+
+        if ((mageTransform.position.y < bottomOfCamera || mageTransform.position.y > topOfCamera) && myObj.GetComponent<Rigidbody2D>().velocity.y == 0) {
+            mageTransform.position = myObj.transform.position + new Vector3(0, myObj.transform.localScale.y, 0);
         }
 
     }
