@@ -308,7 +308,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4775728674733714188, guid: b39290a1634ca6c49a92170f1d4fa702, type: 3}
       propertyPath: m_Name
-      value: Side Friction
+      value: Knight Side Friction
       objectReference: {fileID: 0}
     - target: {fileID: 4775728674733714190, guid: b39290a1634ca6c49a92170f1d4fa702, type: 3}
       propertyPath: m_Size.y
@@ -664,7 +664,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4775728674733714188, guid: b39290a1634ca6c49a92170f1d4fa702, type: 3}
       propertyPath: m_Name
-      value: Side Friction
+      value: Mage Side Friction
       objectReference: {fileID: 0}
     - target: {fileID: 4775728674733714191, guid: b39290a1634ca6c49a92170f1d4fa702, type: 3}
       propertyPath: m_RootOrder
@@ -1112,6 +1112,8 @@ MonoBehaviour:
   upInput: 119
   leftInput: 97
   rightInput: 100
+  spellButton: 101
+  spellObject: {fileID: 5147620734797344834, guid: 903f7c7de9b11d145bb0f92ac0939242, type: 3}
 --- !u!1001 &1923713288
 PrefabInstance:
   m_ObjectHideFlags: 0
