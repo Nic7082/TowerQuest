@@ -9,19 +9,22 @@ public class Spell : MonoBehaviour
     private Collider2D mage;
     private Collider2D mageSideFriction;
 
-    // Update is called once per frame
+
     void Start()
     {
+        // Find mage collider and mage side friction collider
         mage = GameObject.Find("Mage").GetComponent<Collider2D>();
         mageSideFriction = GameObject.Find("Mage Side Friction").GetComponent<Collider2D>();
     }
     void Update()
     {
+        // Move spell to appropiate direcation at appropiate speed
         transform.Translate(Vector3.right * speed * direction);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        // Destroy game object is spell has collided with any other object except `Mage`
         if (!(other == mage || other == mageSideFriction))
         {
             Debug.Log(other);

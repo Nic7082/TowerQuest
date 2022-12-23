@@ -4,15 +4,11 @@ using UnityEngine;
 
 public class Knight : Player
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
+    
     // Update is called once per frame
     void Update()
     {
+        // Move player from using method from `Player` Class
         playerMovement();
     }
 }
