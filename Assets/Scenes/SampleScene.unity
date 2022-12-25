@@ -324,13 +324,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 451048937}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 8.34, y: -2.403, z: 0}
+  m_LocalScale: {x: 0.4402, y: 0.2212, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1695164775}
-  m_RootOrder: 0
+  m_Children:
+  - {fileID: 1695164775}
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &451048939
 BoxCollider2D:
@@ -371,7 +372,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectMoving: {fileID: 1276780424}
-  displacement: {x: 0, y: -3, z: 0}
+  displacement: {x: -3, y: 0, z: 0}
   timeForMovement: 3
 --- !u!1001 &451514975
 PrefabInstance:
@@ -383,6 +384,10 @@ PrefabInstance:
     - target: {fileID: 4775728674733714188, guid: b39290a1634ca6c49a92170f1d4fa702, type: 3}
       propertyPath: m_Name
       value: Knight Side Friction
+      objectReference: {fileID: 0}
+    - target: {fileID: 4775728674733714188, guid: b39290a1634ca6c49a92170f1d4fa702, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4775728674733714190, guid: b39290a1634ca6c49a92170f1d4fa702, type: 3}
       propertyPath: m_Size.y
@@ -740,6 +745,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mage Side Friction
       objectReference: {fileID: 0}
+    - target: {fileID: 4775728674733714188, guid: b39290a1634ca6c49a92170f1d4fa702, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4775728674733714191, guid: b39290a1634ca6c49a92170f1d4fa702, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -932,11 +941,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3215229309097033745, guid: 52360300607895b48924c34cec33544e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.672271
+      value: 8.38
       objectReference: {fileID: 0}
     - target: {fileID: 3215229309097033745, guid: 52360300607895b48924c34cec33544e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.1350546
+      value: 0.26
       objectReference: {fileID: 0}
     - target: {fileID: 3215229309097033745, guid: 52360300607895b48924c34cec33544e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1051,7 +1060,7 @@ GameObject:
   - component: {fileID: 1590350765}
   - component: {fileID: 1590350764}
   - component: {fileID: 1590350768}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Mage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1292,14 +1301,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1695164772}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.34, y: -2.403, z: 0}
-  m_LocalScale: {x: 0.4402, y: 0.2212, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 451048938}
-  m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_Children: []
+  m_Father: {fileID: 451048938}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1695164776
 BoxCollider2D:
@@ -1459,7 +1467,7 @@ GameObject:
   - component: {fileID: 2079525653}
   - component: {fileID: 2079525652}
   - component: {fileID: 2079525657}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Knight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
