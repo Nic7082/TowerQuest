@@ -10,7 +10,7 @@ public class Button : MonoBehaviour
     private Vector3 originalPosition;
     public Vector3 displacement;
     private Vector3 endingPosition;
-    private bool isClicked = false;
+    private int isClicked = 0;
 
     void Start()
     {
@@ -21,11 +21,11 @@ public class Button : MonoBehaviour
     void Update()
     {
         Debug.Log(Vector3.Distance(endingPosition, objectMoving.position));
-        if (isClicked && Vector3.Distance(endingPosition, objectMoving.position) > .01)
+        if (isClicked > 0 && Vector3.Distance(endingPosition, objectMoving.position) > .01)
         {
             objectMovingBody.velocity = displacement;
         }
-        else if(!isClicked && Vector3.Distance(originalPosition, objectMoving.position) > .01)
+        else if(isClicked == 0 && Vector3.Distance(originalPosition, objectMoving.position) > .01)
         {
             objectMovingBody.velocity = -displacement;
         } 
@@ -37,11 +37,11 @@ public class Button : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        isClicked = true;
+        isClicked += 1;
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        isClicked = false;
+        isClicked -= 1;
     }
 }
