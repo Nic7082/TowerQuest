@@ -372,8 +372,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectMoving: {fileID: 1276780424}
+  objectMovingBody: {fileID: 1276780426}
   displacement: {x: -3, y: 0, z: 0}
-  timeForMovement: 3
 --- !u!1001 &451514975
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -988,6 +988,11 @@ PrefabInstance:
 --- !u!4 &1276780424 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3215229309097033745, guid: 52360300607895b48924c34cec33544e, type: 3}
+  m_PrefabInstance: {fileID: 1271956601}
+  m_PrefabAsset: {fileID: 0}
+--- !u!50 &1276780426 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 3215229309097033747, guid: 52360300607895b48924c34cec33544e, type: 3}
   m_PrefabInstance: {fileID: 1271956601}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1507880668

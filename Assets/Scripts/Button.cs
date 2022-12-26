@@ -6,10 +6,10 @@ public class Button : MonoBehaviour
 {
      
     public Transform objectMoving;
+    public Rigidbody2D objectMovingBody;
     private Vector3 originalPosition;
     public Vector3 displacement;
     private Vector3 endingPosition;
-    public int timeForMovement;
     private bool isClicked = false;
 
     void Start()
@@ -20,13 +20,18 @@ public class Button : MonoBehaviour
 
     void Update()
     {
-        if (isClicked && Vector3.Distance(endingPosition, objectMoving.position) > 0.01)
+        Debug.Log(Vector3.Distance(endingPosition, objectMoving.position));
+        if (isClicked && Vector3.Distance(endingPosition, objectMoving.position) > .01)
         {
-            objectMoving.Translate(displacement/(60 * timeForMovement));
+            objectMovingBody.velocity = displacement;
         }
-        else if(!isClicked && Vector3.Distance(originalPosition, objectMoving.position) > 0.01)
+        else if(!isClicked && Vector3.Distance(originalPosition, objectMoving.position) > .01)
         {
-            objectMoving.Translate(-displacement/(60 * timeForMovement));
+            objectMovingBody.velocity = -displacement;
+        } 
+        else 
+        {
+            objectMovingBody.velocity = new Vector2(0,0);
         }
     }
 
