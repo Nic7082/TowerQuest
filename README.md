@@ -1,2 +1,2 @@
 # TowerQuest
-2 player game.
+2 player puzzle platformer.
