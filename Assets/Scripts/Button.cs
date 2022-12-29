@@ -20,7 +20,6 @@ public class Button : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(Vector3.Distance(endingPosition, objectMoving.position));
         if (isClicked > 0 && Vector3.Distance(endingPosition, objectMoving.position) > .01)
         {
             objectMovingBody.velocity = displacement;
