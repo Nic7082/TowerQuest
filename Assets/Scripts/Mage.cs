@@ -31,8 +31,12 @@ public class Mage : Player
         // check for input for `spellButton`
         if (Input.GetKeyDown(spellButton))
         {
+            //find spell object spawn position so not destroyed on contact with mage
+            Vector3 newSpellPosition = transform.position 
+                                    + (new Vector3(transform.localScale.x / 2, 0, 0) + new Vector3(spellObject.transform.localScale.x, 0, 0))
+                                    * currentDirection;
             // Create new Spell Object
-            GameObject newSpell = Instantiate(spellObject, transform.position, transform.rotation);
+            GameObject newSpell = Instantiate(spellObject, newSpellPosition, transform.rotation);
             // Set `direction` of Spell to `currentDirection`
             newSpell.GetComponent<Spell>().direction = currentDirection; 
         }

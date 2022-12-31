@@ -6,30 +6,20 @@ public class Spell : MonoBehaviour
 {
     public float speed;
     public int direction;
-    private Collider2D mage;
-    private Collider2D mageSideFriction;
+    public Rigidbody2D spellBody;
+    private GameObject mage;
+    private GameObject mageSideFriction;
 
 
-    void Start()
-    {
-        // Find mage collider and mage side friction collider
-        mage = GameObject.Find("Mage").GetComponent<Collider2D>();
-        mageSideFriction = GameObject.Find("Mage Side Friction").GetComponent<Collider2D>();
-    }
     void Update()
     {
-        // Move spell to appropiate direcation at appropiate speed
-        transform.Translate(Vector3.right * speed * direction);
+        // Move spell to appropiate direction at appropiate speed
+        spellBody.velocity = (Vector2.right * speed * direction);
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnCollisionEnter2D(Collision2D other)
     {
-        // Destroy game object is spell has collided with any other object except `Mage`
-        if (!(other == mage || other == mageSideFriction))
-        {
-            Debug.Log(other);
-            Destroy(gameObject);
-        }
-
+        // Destroy game object if spell has collided
+        Destroy(gameObject);
     }
 }
