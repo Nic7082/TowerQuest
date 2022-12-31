@@ -2,52 +2,31 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Lever : MonoBehaviour
+public class Lever : ClickableObject
 {
-     
-    public Transform objectMoving;
-    public Rigidbody2D objectMovingBody;
-    private Vector3 originalPosition;
-    public Vector3 displacement;
-    private Vector3 endingPosition;
     private bool isClicked = false;
-    private int cooldown = 0;
-
-
-    void Start()
-    {
-        originalPosition = objectMoving.position;
-        endingPosition = originalPosition + displacement;
-
-        
-    }
+    private int cooldown = 0; // used to prevent multiple collision happening in successive frames
 
     void Update()
     {
-        cooldown += 1;   
-        if (isClicked && Vector3.Distance(endingPosition, objectMoving.position) > .01)
+        if (cooldown != 15)
         {
-            objectMovingBody.velocity = displacement;
+            cooldown += 1; // increment cooldown
         }
-        else if(!isClicked && Vector3.Distance(originalPosition, objectMoving.position) > .01)
-        {
-            objectMovingBody.velocity = -displacement;
-        } 
-        else 
-        {
-            objectMovingBody.velocity = new Vector2(0,0);
-        }
+        runClick(isClicked); // run parent function
 
     }
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        Debug.Log("contact");
-        if (cooldown > 15)
+        if (cooldown == 15) // make sure collision not happening in same frame
         {
-            isClicked = !isClicked;
+            isClicked = !isClicked; // switch value of lever
+
+            // rotate lever
             if (!isClicked)
             {
+                
                 transform.localPosition = new Vector3(-.1f, .2f, 0);
                 transform.localRotation = Quaternion.Euler(0, 0, -45);
             }
@@ -57,6 +36,7 @@ public class Lever : MonoBehaviour
                 transform.localRotation = Quaternion.Euler(0, 0, 45);
             }
 
+            // set cooldown to zero
             cooldown = 0;
         }
     }
