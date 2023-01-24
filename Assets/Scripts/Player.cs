@@ -21,7 +21,7 @@ public class Player : MonoBehaviour
         // if `isUpInput` is true and player is not jumping: Allow player to jump
         if(isUpInput)
         {
-            if (playerBody.velocity.y <= 0.01 && playerBody.velocity.y >= -0.01)
+            if (playerBody.velocity.y <= 0.001 && playerBody.velocity.y >= -0.001)
                  playerBody.velocity = new Vector2(playerBody.velocity.x, verticalMoveSpeed);
         }
         // Move player left and right
