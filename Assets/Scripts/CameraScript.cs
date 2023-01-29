@@ -7,7 +7,6 @@ public class CameraScript : MonoBehaviour
     public GameObject myObj;
     public Transform mageTransform;
     public Camera myCamera;
-    public Rigidbody2D myObjRigidBody;
     void Update()
     {
         //The current y coordinate of the game object
