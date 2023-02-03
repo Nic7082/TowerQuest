@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
     public KeyCode upInput;
     public KeyCode leftInput;
     public KeyCode rightInput;
+    public Animator animator;
     private bool onGround = false;
 
     public void playerMovement()
@@ -27,10 +28,20 @@ public class Player : MonoBehaviour
         
         // Move player left and right
         if (isRightInput) 
+        {
             playerBody.velocity = new Vector2(horizontalMoveSpeed, playerBody.velocity.y);
+            transform.rotation = Quaternion.Euler(0, 180, 0);
+            animator.Play("Running");
+        }
 
-        if (isLeftInput) 
+        else if (isLeftInput) 
+        {
             playerBody.velocity = new Vector2(-horizontalMoveSpeed, playerBody.velocity.y);
+            transform.rotation = Quaternion.Euler(0, 0, 0);
+            animator.Play("Running");
+        }
+        
+        else animator.Play("idle");
 
     }
     public void OnTriggerStay2D(Collider2D col) 
