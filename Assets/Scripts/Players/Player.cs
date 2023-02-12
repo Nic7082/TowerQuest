@@ -10,26 +10,37 @@ public class Player : MonoBehaviour
     public KeyCode upInput;
     public KeyCode leftInput;
     public KeyCode rightInput;
-    
+    private bool onGround = false;
 
     public void playerMovement()
     {
         // variable to check if input is pressed
-        bool isUpInput = Input.GetKey(upInput);
         bool isLeftInput = Input.GetKey(leftInput);
         bool isRightInput = Input.GetKey(rightInput);
+
+        //Getting up input
+        bool isUpInput = Input.GetKey(upInput);
+        
         // if `isUpInput` is true and player is not jumping: Allow player to jump
-        if(isUpInput)
-        {
-            if (playerBody.velocity.y <= 0.01 && playerBody.velocity.y >= -0.01)
-                 playerBody.velocity = new Vector2(playerBody.velocity.x, verticalMoveSpeed);
-        }
+        if(isUpInput && onGround)
+            playerBody.velocity = new Vector2(playerBody.velocity.x, verticalMoveSpeed);
+        
         // Move player left and right
         if (isRightInput) 
             playerBody.velocity = new Vector2(horizontalMoveSpeed, playerBody.velocity.y);
 
-        if (isLeftInput)
+        if (isLeftInput) 
             playerBody.velocity = new Vector2(-horizontalMoveSpeed, playerBody.velocity.y);
 
     }
+    public void OnTriggerStay2D(Collider2D col) 
+    {
+        onGround = true;
+    }
+
+    public void OnTriggerExit2D(Collider2D col)
+    {
+        onGround = false;
+    }
+    
 }
