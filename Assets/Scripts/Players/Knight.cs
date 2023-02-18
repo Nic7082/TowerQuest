@@ -9,6 +9,6 @@ public class Knight : Player
     void Update()
     {
         // Move player from using method from `Player` Class
-        playerMovement();
+        // playerMovement(new Vector2(0, 0), new Vector2(1, 1));
     }
 }
