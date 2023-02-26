@@ -727,6 +727,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1472393863}
     - target: {fileID: 4905499601113516866, guid: 656c9b416a4bb1841a639746e5d1a0cf, type: 3}
+      propertyPath: displacement.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4905499601113516866, guid: 656c9b416a4bb1841a639746e5d1a0cf, type: 3}
       propertyPath: objectMovingBody
       value: 
       objectReference: {fileID: 1472393862}
@@ -3307,7 +3311,7 @@ PrefabInstance:
       objectReference: {fileID: 489507262}
     - target: {fileID: 5804018643811527088, guid: 1fa9bf3dc2c65964d811637852b8b293, type: 3}
       propertyPath: displacement.y
-      value: -2.5
+      value: -3
       objectReference: {fileID: 0}
     - target: {fileID: 5804018643811527088, guid: 1fa9bf3dc2c65964d811637852b8b293, type: 3}
       propertyPath: objectMovingBody
