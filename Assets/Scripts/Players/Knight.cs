@@ -8,7 +8,6 @@ public class Knight : Player
     // Update is called once per frame
     void Update()
     {
-        // Move player from using method from `Player` Class
-        // playerMovement(new Vector2(0, 0), new Vector2(1, 1));
+        playerMovement(new Vector2(-0.04717964f, 2.028722f), new Vector2(1.31453f, 1.691967f));
     }
 }
