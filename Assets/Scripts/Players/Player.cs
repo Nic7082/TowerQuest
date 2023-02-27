@@ -83,15 +83,17 @@ public class Player : MonoBehaviour
         if(collision.contacts.Length > 0)
         {
          ContactPoint2D contact = collision.contacts[0];
-         if(Vector3.Dot(contact.normal, Vector3.up) > 0.5)
+         if(Vector2.Dot(contact.normal, Vector2.up) > 0.5)
          {
              onGround = true;
          }
 
-         if(contact.normal.x != 0)
-         {
+         
+        }
+
+        if (collision.transform.name == "Left Wall" || collision.transform.name == "Right Wall")
+        {
             wallVelocity = horizontalMoveSpeed;
-         }
         }
 
     }
