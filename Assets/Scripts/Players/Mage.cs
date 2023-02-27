@@ -11,11 +11,17 @@ public class Mage : Player
     // Direction `Mage` is facing (1: Right, -1: Left)
      private int currentDirection = 1; 
 
+     private Vector2 jumpOffset = new Vector2(-0.1520548f, 1.81458f);
+     
+      private Vector2 jumpSize = new Vector2(0.8787022f, 1.697918f);
+
     // Update is called once per frame
     void Update()
     {
+        
+        
         // Call movement method from `Player` 
-        playerMovement();
+        playerMovement(jumpOffset, jumpSize);
 
         // if previous velocity was left set direction to -1
         if (playerBody.velocity.x < 0)
