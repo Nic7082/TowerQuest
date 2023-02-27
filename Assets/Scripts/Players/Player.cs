@@ -87,14 +87,13 @@ public class Player : MonoBehaviour
          {
              onGround = true;
          }
-        }
 
-        Debug.Log(collision.transform.name);
-
-        if (collision.transform.name == "Left Wall" || collision.transform.name == "Right Wall") 
-        {
+         if(contact.normal.x != 0)
+         {
             wallVelocity = horizontalMoveSpeed;
+         }
         }
+
     }
 
     public void OnCollisionExit2D(Collision2D col)
