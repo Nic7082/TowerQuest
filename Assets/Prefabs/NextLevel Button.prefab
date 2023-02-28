@@ -72,9 +72,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14f6e42559a367b478a4887a552cf5ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectMoving: {fileID: 0}
-  objectMovingBody: {fileID: 0}
-  displacement: {x: 0, y: 0, z: 0}
   isClicked: 0
 --- !u!1 &5804018644946597176
 GameObject:
@@ -152,7 +149,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.9716981, g: 0.03116761, b: 0.75683856, a: 1}
+  m_Color: {r: 0, g: 0.86056876, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
