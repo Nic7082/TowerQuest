@@ -39,6 +39,7 @@ public class Player : MonoBehaviour
 
         //Getting up input
         bool isUpInput = Input.GetKey(upInput);
+
         
         // if `isUpInput` is true and player is not jumping: Allow player to jump
         if(isUpInput && onGround)
@@ -85,13 +86,16 @@ public class Player : MonoBehaviour
          ContactPoint2D contact = collision.contacts[0];
          if(Vector2.Dot(contact.normal, Vector2.up) > 0.5)
          {
+             Vector3 pos = transform.position;
+
+             if (playerBody.velocity.y < 0) Debug.Log("helo");
              onGround = true;
          }
 
          
         }
 
-        if (collision.transform.name == "Left Wall" || collision.transform.name == "Right Wall")
+        if (!onGround && playerBody.velocity.y == 0)
         {
             wallVelocity = horizontalMoveSpeed;
         }
