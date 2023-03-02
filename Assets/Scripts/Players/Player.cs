@@ -49,7 +49,7 @@ public class Player : MonoBehaviour
             // colld.size = jumpColSize;
 
             playerBody.velocity = new Vector2(playerBody.velocity.x, verticalMoveSpeed);
-            // animator.Play("Jump");
+            animator.Play("idle");
         }
         
         // Move player left and right

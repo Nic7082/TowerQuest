@@ -41,6 +41,7 @@ public class Mage : Player
             Vector3 newSpellPosition = transform.position 
                                     + (new Vector3(transform.localScale.x / 2, 0, 0) + new Vector3(spellObject.transform.localScale.x, 0, 0))
                                     * currentDirection;
+            newSpellPosition += Vector3.up;
             // Create new Spell Object
             GameObject newSpell = Instantiate(spellObject, newSpellPosition, transform.rotation);
             // Set `direction` of Spell to `currentDirection`

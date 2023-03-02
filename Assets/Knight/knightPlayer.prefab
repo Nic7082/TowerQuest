@@ -209,7 +209,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerBody: {fileID: 965952613317246235}
   horizontalMoveSpeed: 3
-  verticalMoveSpeed: 10
+  verticalMoveSpeed: 9
   upInput: 273
   leftInput: 276
   rightInput: 275
