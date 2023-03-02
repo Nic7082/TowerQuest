@@ -15,6 +15,8 @@ public class NextLevel : MonoBehaviour
     {
         if (button1.GetComponent<LevelButton>().isClicked && button2.GetComponent<LevelButton>().isClicked)
         {
+            Debug.Log(button1.GetComponent<LevelButton>().isClicked);
+            Debug.Log(button2.GetComponent<LevelButton>().isClicked);
             SceneManager.LoadScene(nextLevelName);
         }
     }
