@@ -16,7 +16,7 @@ public class Mage : Player
       private Vector2 jumpSize = new Vector2(0.8787022f, 1.697918f);
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         
         
