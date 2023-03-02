@@ -967,6 +967,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 52360300607895b48924c34cec33544e, type: 3}
+--- !u!50 &457533580 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 6332074268173515410, guid: fab670f55bca5e1418d0a22b7e13320e, type: 3}
+  m_PrefabInstance: {fileID: 1905231478}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &457533582 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6332074268173515408, guid: fab670f55bca5e1418d0a22b7e13320e, type: 3}
+  m_PrefabInstance: {fileID: 1905231478}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &462323889
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2887,9 +2897,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 5804018643811527088, guid: 1fa9bf3dc2c65964d811637852b8b293, type: 3}
+      propertyPath: objectMoving
+      value: 
+      objectReference: {fileID: 457533582}
+    - target: {fileID: 5804018643811527088, guid: 1fa9bf3dc2c65964d811637852b8b293, type: 3}
       propertyPath: displacement.y
-      value: 12
+      value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 5804018643811527088, guid: 1fa9bf3dc2c65964d811637852b8b293, type: 3}
+      propertyPath: objectMovingBody
+      value: 
+      objectReference: {fileID: 457533580}
     - target: {fileID: 5804018643811527093, guid: 1fa9bf3dc2c65964d811637852b8b293, type: 3}
       propertyPath: m_Name
       value: Button Collider (4)
@@ -3288,11 +3306,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 787419330723888194, guid: 85e2a701587cda044a47d036ac57af53, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.28
+      value: -5.62
       objectReference: {fileID: 0}
     - target: {fileID: 787419330723888194, guid: 85e2a701587cda044a47d036ac57af53, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 16.68
+      value: -3.36
       objectReference: {fileID: 0}
     - target: {fileID: 787419330723888194, guid: 85e2a701587cda044a47d036ac57af53, type: 3}
       propertyPath: m_LocalPosition.z
