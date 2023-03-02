@@ -344,11 +344,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4851184774222877398, guid: cd5b1957ecc3bd54b80e30ef026ae42a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.99
+      value: -4.16
       objectReference: {fileID: 0}
     - target: {fileID: 4851184774222877398, guid: cd5b1957ecc3bd54b80e30ef026ae42a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 20.58
+      value: -3.4
       objectReference: {fileID: 0}
     - target: {fileID: 4851184774222877398, guid: cd5b1957ecc3bd54b80e30ef026ae42a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -384,7 +384,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5195199544813865068, guid: cd5b1957ecc3bd54b80e30ef026ae42a, type: 3}
       propertyPath: m_Name
-      value: MagePlayer
+      value: Mage
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd5b1957ecc3bd54b80e30ef026ae42a, type: 3}
@@ -1815,7 +1815,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 118968365072180984, guid: 85e2a701587cda044a47d036ac57af53, type: 3}
       propertyPath: m_Name
-      value: knightPlayer
+      value: Knight
       objectReference: {fileID: 0}
     - target: {fileID: 787419330723888194, guid: 85e2a701587cda044a47d036ac57af53, type: 3}
       propertyPath: m_RootOrder
@@ -1827,7 +1827,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 787419330723888194, guid: 85e2a701587cda044a47d036ac57af53, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 21.19
+      value: -3.19
       objectReference: {fileID: 0}
     - target: {fileID: 787419330723888194, guid: 85e2a701587cda044a47d036ac57af53, type: 3}
       propertyPath: m_LocalPosition.z

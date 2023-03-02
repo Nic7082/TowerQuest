@@ -45,11 +45,11 @@ public class Player : MonoBehaviour
         if(isUpInput && onGround)
         {
 
-            colld.offset = jumpColOffset;
-            colld.size = jumpColSize;
+            // colld.offset = jumpColOffset;
+            // colld.size = jumpColSize;
 
             playerBody.velocity = new Vector2(playerBody.velocity.x, verticalMoveSpeed);
-            animator.Play("Jump");
+            // animator.Play("Jump");
         }
         
         // Move player left and right
@@ -88,7 +88,6 @@ public class Player : MonoBehaviour
          {
              Vector3 pos = transform.position;
 
-             if (playerBody.velocity.y < 0) Debug.Log("helo");
              onGround = true;
          }
 
