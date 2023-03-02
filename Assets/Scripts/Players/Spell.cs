@@ -11,7 +11,7 @@ public class Spell : MonoBehaviour
     private GameObject mageSideFriction;
 
 
-    void Update()
+    void FixedUpdate()
     {
         // Move spell to appropiate direction at appropiate speed
         spellBody.velocity = (Vector2.right * speed * direction);

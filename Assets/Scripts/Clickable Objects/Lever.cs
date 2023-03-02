@@ -7,7 +7,7 @@ public class Lever : ClickableObject
     private bool isClicked = false;
     private int cooldown = 0; // used to prevent multiple collision happening in successive frames
 
-    void Update()
+    void FixedUpdate()
     {
         if (cooldown != 15)
         {

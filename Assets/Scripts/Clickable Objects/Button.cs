@@ -6,7 +6,7 @@ public class Button : ClickableObject
 {
     private int isClicked = 0;
 
-    void Update()
+    void FixedUpdate()
     {
         runClick(isClicked > 0); // run parent function
     }

@@ -26,7 +26,7 @@ public class MovingPlatformScript : MonoBehaviour
         transform.position = startPosition;
     }
     
-    void Update()
+    void FixedUpdate()
     {
 
         if (Vector3.Distance(endPosition, transform.position) < .1) 
